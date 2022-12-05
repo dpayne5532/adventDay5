@@ -515,26 +515,6 @@ var obj = {
 
 var arrStr = str.split('\n');
 
-function moveCrate(arr, obj) { 
-  var quan = arr[0];
-  var src = arr[1];
-  var dest = arr[2];
-  for (var i = 0; i < quan; i++) {
-    obj[dest].push(obj[src].pop());
-  }  
-  return obj;
-}
-
-function moveCrateTwo(arr, obj) { 
-  var quan = arr[0];
-  var src = arr[1];
-  var dest = arr[2];
-  var inAir = obj[src].splice(obj[src].length - quan);
-  var desty = obj[dest];
-  obj[dest] = desty.concat(inAir)
-  return obj;
-}
-
 function getCommand(arr) {
   var result = [];
   var ele = arr.slice(4);
@@ -560,10 +540,28 @@ function getCommand(arr) {
         var dest = Number(ele[0]);
         result.push(dest);
         return result;
-      
     }
-  
   return 'Error';
+}
+
+function moveCrate(arr, obj) { 
+  var quan = arr[0];
+  var src = arr[1];
+  var dest = arr[2];
+  for (var i = 0; i < quan; i++) {
+    obj[dest].push(obj[src].pop());
+  }  
+  return obj;
+}
+
+function moveCrateTwo(arr, obj) { 
+  var quan = arr[0];
+  var src = arr[1];
+  var dest = arr[2];
+  var inAir = obj[src].splice(obj[src].length - quan);
+  var desty = obj[dest];
+  obj[dest] = desty.concat(inAir)
+  return obj;
 }
 
 function dayFive(obj, arr) {
