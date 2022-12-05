@@ -538,9 +538,8 @@ function moveCrateTwo(arr, obj) {
 
 function getCommand(arr) {
   var result = [];
-    var ele = arr.slice(4);
+  var ele = arr.slice(4);
     if (ele.length === 14) {
-      result = [];
       var moveQ = Number(ele[1]);
       result.push(moveQ);
       ele = ele.slice(8);
