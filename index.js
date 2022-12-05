@@ -542,26 +542,29 @@ function getCommand(arr) {
     if (ele.length === 14) {
       result = [];
       var moveQ = Number(ele[1]);
+      result.push(moveQ);
       ele = ele.slice(8);
       var source = Number(ele[0]);
+      result.push(source);
       ele = ele.slice(5);
       var dest = Number(ele[0]);
-      result.push(moveQ);
-      result.push(source);
       result.push(dest);
       return result;
+      
     } else if (ele.length === 15) {
         var newEle = ele[1] + ele[2]
         var newEle = Number(newEle);
+        result.push(newEle);
         ele = ele.slice(9);
         var source = Number(ele[0]);
+        result.push(source);
         ele = ele.slice(5);
         var dest = Number(ele[0]);
-        result.push(newEle);
-        result.push(source);
         result.push(dest);
         return result;
+      
     }
+  
   return 'Error';
 }
 
