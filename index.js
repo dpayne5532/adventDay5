@@ -536,7 +536,7 @@ function moveCrateTwo(arr, obj) {
   return obj;
 }
 
-function arrLoop(arr) {
+function getCommand(arr) {
   var result = [];
     var ele = arr.slice(4);
     if (ele.length === 14) {
@@ -568,7 +568,7 @@ function arrLoop(arr) {
 function dayFive(obj, arr) {
   for (var i = 0; i < arr.length; i++) {
     
-    var command = arrLoop(arr[i]);
+    var command = getCommand(arr[i]);
     moveCrateTwo(command, obj)
     
   }
