@@ -501,7 +501,6 @@ move 7 from 8 to 6
 move 9 from 3 to 2
 move 1 from 8 to 5`
 
-
 var obj = {
   1: ['Q', 'F', 'M', 'R', 'L', 'W', 'C', 'V'],
   2: ['D', 'Q', 'L'],
@@ -569,10 +568,8 @@ function getCommand(arr) {
 
 function dayFive(obj, arr) {
   for (var i = 0; i < arr.length; i++) {
-    
     var command = getCommand(arr[i]);
     moveCrateTwo(command, obj)
-    
   }
   return obj;
 }
