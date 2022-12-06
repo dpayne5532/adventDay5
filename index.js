@@ -564,14 +564,6 @@ function moveCrateTwo(arr, obj) {
   return obj;
 }
 
-function dayFive(obj, arr) {
-  for (var i = 0; i < arr.length; i++) {
-    var command = getCommand(arr[i]);
-    moveCrateTwo(command, obj)
-  }
-  return obj;
-}
-
 function topBox(obj) {
   var result = "";
   for (var i in obj) {
@@ -582,5 +574,15 @@ function topBox(obj) {
  return result; 
 }
 
-console.log(dayFive(obj, arrStr));
+function dayFive(obj, arr) {
+  for (var i = 0; i < arr.length; i++) {
+    var command = getCommand(arr[i]);
+    moveCrateTwo(command, obj)
+  }
+  console.log(topBox(obj));
+  return obj;
+}
+
+dayFive(obj, arrStr);
+
 console.log(topBox(obj));
